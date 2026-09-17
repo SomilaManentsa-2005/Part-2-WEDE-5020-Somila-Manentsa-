@@ -1,0 +1,40 @@
+# Changelog
+
+All notable changes to the **Kasi-Tech Solutions** website will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.0] - 2026-09-17
+
+### Added
+- Initial release of the Kasi-Tech Solutions company website
+- **Home page** (`index.html`) with hero banner, service highlights, and call-to-action
+- **About Us page** with company history, mission, vision, and team profiles
+- **Services page** showcasing Web Application, Network Infrastructure, and Database & System Analysis
+- **Enquiry page** with full consultation/quotation request form
+- **Contact Us page** with callback form, contact details, opening hours, and embedded Google Map
+- Responsive CSS stylesheet (`style.css`) using CSS custom properties, Flexbox, and Grid
+- Multi-column footer with brand info, helpful links, contact details, and social media icons
+- Font Awesome 6.5.1 icons integration
+- Consistent branding (navy blue primary + gold accent colour scheme)
+- Mobile-friendly navigation and layout (breakpoints at 900px and 600px)
+
+### Team Credits
+- Somila Manentsa – IT Manager & Systems Analyst
+- Landile Mbuti – Infrastructure Specialist
+- Asavela Ngcamla – Database Architect
+- Kubobonke Diko – Web Systems Developer
+
+---
+
+## [Unreleased]
+
+### Planned
+- Connect enquiry and contact forms to a backend / email service
+- Standardise all internal file paths and filenames (case consistency)
+- Add client-side form validation
+- Image optimisation (WebP format + responsive sizes)
+- Optional FAQ or blog section
