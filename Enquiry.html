@@ -6,7 +6,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>EnquiryPage</title>
+    <title>Enquiry & Orders | African Foods Company</title>
 </head>
 <body>
     
@@ -14,15 +14,15 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="../index.html">
-                <img src="../images/logo.png" alt="Kasi-Tech Logo" class="nav-logo">
-                Kasi_Tech Solutions
+                <img src="../images/logo.png" alt="African Foods Company Logo" class="nav-logo">
+                African Foods Company
             </a>
             
             <nav class="site-nav" aria-label="Main navigation">
                 <a href="../index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="enquiry.html">Enquiry</a>
+                <a href="services.html">Products & Services</a>
+                <a href="enquiry.html" aria-current="page">Enquiry</a>
                 <a href="contactus.html">Contact Us</a>
             </nav>
         </div>
@@ -31,9 +31,9 @@
     <!-- Page Banner -->
     <section class="page-header">
         <div class="container">
-            <p class="eyebrow">Get In Touch</p>
-            <h1>Enquire More From Us!!</h1>
-            <p class="page-introduction">Fill out the form below to book a consultation or request a custom service quotation.</p>
+            <p class="eyebrow">Export Orders & Enquiries</p>
+            <h1>Place an Order or Enquire With Us!</h1>
+            <p class="page-introduction">Fill out the form below to order your favourite South African food exports or request a custom bulk shipping quotation.</p>
         </div>
     </section>
 
@@ -43,8 +43,9 @@
             <div class="contact-card" style="max-width: 800px; margin: 0 auto;">
                 <form action="#" method="post" class="contact-form">
                     
+                    <!-- Section 1: Customer Info -->
                     <fieldset style="border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Your Personal Information</strong></legend>
+                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Your Personal & Shipping Information</strong></legend>
                         <br>
                        
                         <div class="form-group" style="margin-bottom: 1rem;">
@@ -59,55 +60,92 @@
 
                         <div class="form-group" style="margin-bottom: 1rem;">
                             <label for="phone">Phone / WhatsApp Number:</label>
-                            <input type="tel" id="phone" name="phone" placeholder="e.g. 072 763 3457">
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. +27 72 763 3457">
                         </div>
 
                         <div class="form-group">
-                            <label for="location">Suburban Area in Gqeberha:</label>
-                            <input type="text" id="location" name="location" placeholder="e.g. St Georges , Motherwell">
+                            <label for="location">Destination Country & City Overseas:</label>
+                            <input type="text" id="location" name="location" placeholder="e.g. London, United Kingdom / Sydney, Australia" required>
                         </div>
                     </fieldset>
 
+                    <!-- Section 2: Order Selection & Pricing -->
                     <fieldset style="border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Enquiry & Consultation booking</strong></legend>
+                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Product Selection & Overseas Export Pricing</strong></legend>
                         <br>
 
                         <div class="form-group" style="margin-bottom: 1rem;">
-                            <label for="category">Enquiry Category:</label>
+                            <label for="category">Enquiry / Transaction Type:</label>
                             <select id="category" name="category" required>
-                                <option value="" disabled selected>-- Select an Enquiry Type --</option>
-                                <option value="booking">booking Consultation</option>
-                                <option value="Service Quotation">Services Quotation fee</option>
-                                <option value="general">General Enquiry</option>
+                                <option value="" disabled selected>-- Select Type --</option>
+                                <option value="buy_products">Direct Product Order / Purchase</option>
+                                <option value="bulk_quotation">Bulk Shipping & Export Quotation Fee</option>
+                                <option value="general_enquiry">General Product Enquiry</option>
                             </select>
                         </div>
 
+                        <!-- Product Selection with Prices -->
                         <div style="margin-bottom: 1.5rem;">
-                            <label style="font-weight: bold; font-size: 0.9rem;">Preferred Availability for :</label><br><br>
+                            <label style="font-weight: bold; font-size: 0.9rem;">Select Products to Buy / Order (Price per Item Pack):</label><br><br>
                             
                             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
-                                <input type="checkbox" id="avail_saturday" name="availability[]" value="Saturday">
-                                <label for="avail_saturday">Saturday</label>
+                                <input type="checkbox" id="prod_biltong" name="products[]" value="Vacuum Packed Biltong (500g)">
+                                <label for="prod_biltong">Vacuum Packed Traditional Biltong (500g) — <strong>R 185.00</strong></label>
                             </div>
                            
                             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
-                                <input type="checkbox" id="avail_sunday" name="availability[]" value="Sunday">
-                                <label for="avail_sunday">Sunday</label>
+                                <input type="checkbox" id="prod_niknaks" name="products[]" value="NikNaks Fruit Chutney Pack (150g)">
+                                <label for="prod_niknaks">NikNaks Fruit Chutney Pack (150g) — <strong>R 22.00</strong></label>
                             </div>
-                           
+
+                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="checkbox" id="prod_rooibos" name="products[]" value="Rooibos Tea Box (80 Tagless Bags)">
+                                <label for="prod_rooibos">Rooibos Tea Box (80 Tagless Bags) — <strong>R 65.00</strong></label>
+                            </div>
+
+                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="checkbox" id="prod_mrsballs" name="products[]" value="Mrs Balls Original Chutney (470g Glass Bottle)">
+                                <label for="prod_mrsballs">Mrs Ball's Original Chutney (470g Bottle) — <strong>R 48.00</strong></label>
+                            </div>
+
+                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="checkbox" id="prod_ouma" name="products[]" value="Ouma Rusks Condensed Milk (500g)">
+                                <label for="prod_ouma">Ouma Rusks Condensed Milk (500g) — <strong>R 68.00</strong></label>
+                            </div>
+
+                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="checkbox" id="prod_stoney" name="products[]" value="Stoney Extra Ginger Beer Cans (6x 330ml)">
+                                <label for="prod_stoney">Stoney Extra Ginger Beer (6 x 330ml Cans) — <strong>R 75.00</strong></label>
+                            </div>
+
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
-                                <input type="checkbox" id="avail_weekdays" name="availability[]" value="Weekdays">
-                                <label for="avail_weekdays">Weekdays</label>
+                                <input type="checkbox" id="prod_atchaar" name="products[]" value="Bottled Mango Atchaar (380g)">
+                                <label for="prod_atchaar">Bottled Mango Atchaar (380g) — <strong>R 52.00</strong></label>
+                            </div>
+                        </div>
+
+                        <!-- Preferred Delivery Option -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="font-weight: bold; font-size: 0.9rem;">Preferred Shipping Method:</label><br><br>
+                            
+                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="radio" id="ship_standard" name="shipping" value="Standard Air Freight">
+                                <label for="ship_standard">Standard Overseas Air Freight (7-14 Days)</label>
+                            </div>
+
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <input type="radio" id="ship_express" name="shipping" value="Express International Courier">
+                                <label for="ship_express">Express International Courier (3-5 Days)</label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Specific Request:</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Please tell us more about your enquiry or how you'd like to get involved..." required></textarea>
+                            <label for="message">Order Quantities & Specific Instructions:</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Please specify quantities (e.g. 3x Biltong, 2x Mrs Balls Chutney) and any special packaging or delivery notes..." required></textarea>
                         </div>
                     </fieldset>
 
-                    <button type="submit" class="btn-primary" style="align-self: flex-start;">Submit Enquiry</button>
+                    <button type="submit" class="btn-primary" style="align-self: flex-start;">Submit Order / Enquiry</button>
 
                 </form>
             </div>
@@ -121,10 +159,10 @@
             <!-- Column 1: Brand & Logo -->
             <div class="footer-col brand-col">
                 <div class="footer-brand">
-                    <img src="../images/logo.png" alt="Kasi-Tech Logo" class="footer-logo">
-                    <span class="footer-brand-title">Kasi-Tech Solutions</span>
+                    <img src="../images/logo.png" alt="African Foods Company Logo" class="footer-logo">
+                    <span class="footer-brand-title">African Foods Company</span>
                 </div>
-                <p class="footer-tagline">In pursuit of digital excellence</p>
+                <p class="footer-tagline">Bringing authentic South African tastes to the world</p>
                 
                 <div class="social-icons">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook">
@@ -148,15 +186,14 @@
                 </div>
             </div>
 
-            <!-- Column 2: About Kasi-Tech -->
+            <!-- Column 2: About AFC -->
             <div class="footer-col">
-                <h4 class="footer-heading">About Kasi-Tech</h4>
+                <h4 class="footer-heading">About AFC</h4>
                 <ul class="footer-links">
                     <li><a href="about.html">Our History</a></li>
                     <li><a href="about.html">Mission & Vision</a></li>
-                    <li><a href="services.html">Core Services</a></li>
-                    <li><a href="services.html">Systems Analysis</a></li>
-                    <li><a href="services.html">Database Management</a></li>
+                    <li><a href="services.html">Products & Services</a></li>
+                    <li><a href="services.html">Export Catalogue</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -168,7 +205,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="enquiry.html">Request a Quote / Consultation</a></li>
+                    <li><a href="enquiry.html">Place Product Order</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -176,11 +213,10 @@
             <!-- Column 4: Get In Touch -->
             <div class="footer-col contact-col">
                 <h4 class="footer-heading">Get in touch</h4>
-                <p><strong>Email Address:</strong> KasiTechI@gmail.com</p>
-                <p><strong>WhatsApp:</strong> <a href="https://wa.me/27630891350" target="_blank" style="color: #ffffff; text-decoration: underline;">063 089 1350</a></p>
-                <p><strong>Telephone:</strong> 041 082 1316</p>
+                <p><strong>Email Address:</strong> info@africanfoods.co.za</p>
+                <p><strong>Head Office:</strong> Cape Town, South Africa[cite: 1]</p>
+                <p><strong>Branch Office:</strong> Durban, South Africa[cite: 1]</p>
                 <div class="location-list">
-                    <p><strong>Location:</strong> Motherwell, Gqeberha</p>
                     <p><strong>Operating Hours:</strong></p>
                     <p>Mon-Fri: 08:00–17:00</p>
                     <p>Weekends: 09:00–14:00</p>
@@ -190,7 +226,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Kasi-Tech Solutions. All rights reserved.</p>
+            <p>&copy; 2026 African Foods Company (Ltd). All rights reserved.[cite: 1]</p>
         </div>
     </footer>
 
