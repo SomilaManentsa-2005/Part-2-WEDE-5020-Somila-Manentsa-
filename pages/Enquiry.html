@@ -3,196 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome Icons -->
+    <title>Enquiry & Checkout | African Foods Company</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>EnquiryPage</title>
 </head>
 <body>
     
-    <!-- Header Navigation -->
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="../index.html">
-                <img src="../images/logo.png" alt="Kasi-Tech Logo" class="nav-logo">
-                Kasi_Tech Solutions
+                <img src="../images/african-foods-logo.png" alt="African Foods Company Logo" class="nav-logo">
+                African Foods Company
             </a>
             
             <nav class="site-nav" aria-label="Main navigation">
                 <a href="../index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="enquiry.html">Enquiry</a>
+                <a href="enquiry.html" aria-current="page">Enquiry & Checkout</a>
                 <a href="contactus.html">Contact Us</a>
             </nav>
         </div>
     </header>
 
-    <!-- Page Banner -->
     <section class="page-header">
         <div class="container">
-            <p class="eyebrow">Get In Touch</p>
-            <h1>Enquire More From Us!!</h1>
-            <p class="page-introduction">Fill out the form below to book a consultation or request a custom service quotation.</p>
+            <p class="eyebrow">Export Orders & Secure Checkout</p>
+            <h1>Your Order Basket & Enquiries</h1>
+            <p class="page-introduction">Select your favourite South African food items, adjust quantities, review your basket subtotal, and submit your order or export quotation request.</p>
         </div>
     </section>
 
-    <!-- Main Content Form -->
     <main class="contact-section">
         <div class="container">
-            <div class="contact-card" style="max-width: 800px; margin: 0 auto;">
+            <div class="contact-card" style="max-width: 900px; margin: 0 auto;">
                 <form action="#" method="post" class="contact-form">
                     
+                    <!-- Section 1: Customer & Shipping Information -->
                     <fieldset style="border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Your Personal Information</strong></legend>
+                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>1. Customer & Overseas Shipping Information</strong></legend>
                         <br>
                        
-                        <div class="form-group" style="margin-bottom: 1rem;">
+                        <div class="form-group">
                             <label for="fullname">Full Name:</label>
                             <input type="text" id="fullname" name="fullname" placeholder="e.g. Somila Manentsa" required>
                         </div>
 
-                        <div class="form-group" style="margin-bottom: 1rem;">
+                        <div class="form-group">
                             <label for="email">Email Address:</label>
                             <input type="email" id="email" name="email" placeholder="e.g. somilamanentsa@example.com" required>
                         </div>
 
-                        <div class="form-group" style="margin-bottom: 1rem;">
+                        <div class="form-group">
                             <label for="phone">Phone / WhatsApp Number:</label>
-                            <input type="tel" id="phone" name="phone" placeholder="e.g. 072 763 3457">
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. +27 72 763 3457">
                         </div>
 
                         <div class="form-group">
-                            <label for="location">Suburban Area in Gqeberha:</label>
-                            <input type="text" id="location" name="location" placeholder="e.g. St Georges , Motherwell">
+                            <label for="location">Destination Country & City Overseas:</label>
+                            <input type="text" id="location" name="location" placeholder="e.g. London, United Kingdom" required>
                         </div>
                     </fieldset>
 
+                    <!-- Section 2: Product Basket & Prices -->
                     <fieldset style="border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Enquiry & Consultation booking</strong></legend>
+                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>2. Shopping Basket & Product Selection</strong></legend>
+                        <p style="font-size: 0.9rem; color: #555; margin-top: 0.5rem; margin-bottom: 1rem;">Select the items you wish to purchase and specify your quantities below:</p>
+
+                        <!-- Basket Item 1 -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <input type="checkbox" id="item1" name="basket_items[]" value="Vacuum Packed Biltong (500g)">
+                                <label for="item1" style="font-weight: bold;">Vacuum Packed Traditional Biltong (500g)</label>
+                                <div style="font-size: 0.85rem; color: #666;">Long-shelf life cured beef snack</div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span style="color: var(--primary); font-weight: bold;">R 185.00</span>
+                                <div>
+                                    <label for="qty1" style="font-size: 0.8rem;">Qty:</label>
+                                    <input type="number" id="qty1" name="qty_biltong" min="0" value="0" style="width: 60px; padding: 0.3rem;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Basket Item 2 -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <input type="checkbox" id="item2" name="basket_items[]" value="NikNaks Fruit Chutney Pack (150g)">
+                                <label for="item2" style="font-weight: bold;">NikNaks Fruit Chutney Pack (150g)</label>
+                                <div style="font-size: 0.85rem; color: #666;">Iconic South African maize snack</div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span style="color: var(--primary); font-weight: bold;">R 22.00</span>
+                                <div>
+                                    <label for="qty2" style="font-size: 0.8rem;">Qty:</label>
+                                    <input type="number" id="qty2" name="qty_niknaks" min="0" value="0" style="width: 60px; padding: 0.3rem;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Basket Item 3 -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <input type="checkbox" id="item3" name="basket_items[]" value="Rooibos Tea Box (80 Tagless Bags)">
+                                <label for="item3" style="font-weight: bold;">Rooibos Tea Box (80 Tagless Bags)</label>
+                                <div style="font-size: 0.85rem; color: #666;">Organic herbal tea from the Western Cape</div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span style="color: var(--primary); font-weight: bold;">R 65.00</span>
+                                <div>
+                                    <label for="qty3" style="font-size: 0.8rem;">Qty:</label>
+                                    <input type="number" id="qty3" name="qty_rooibos" min="0" value="0" style="width: 60px; padding: 0.3rem;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Basket Item 4 -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <input type="checkbox" id="item4" name="basket_items[]" value="Mrs Balls Original Chutney (470g Bottle)">
+                                <label for="item4" style="font-weight: bold;">Mrs Ball's Original Chutney (470g)</label>
+                                <div style="font-size: 0.85rem; color: #666;">Classic fruit chutney condiment</div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span style="color: var(--primary); font-weight: bold;">R 48.00</span>
+                                <div>
+                                    <label for="qty4" style="font-size: 0.8rem;">Qty:</label>
+                                    <input type="number" id="qty4" name="qty_chutney" min="0" value="0" style="width: 60px; padding: 0.3rem;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Basket Item 5 -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <input type="checkbox" id="item5" name="basket_items[]" value="Ouma Rusks Condensed Milk (500g)">
+                                <label for="item5" style="font-weight: bold;">Ouma Rusks Condensed Milk (500g)</label>
+                                <div style="font-size: 0.85rem; color: #666;">Traditional buttermilk & condensed milk rusks</div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span style="color: var(--primary); font-weight: bold;">R 68.00</span>
+                                <div>
+                                    <label for="qty5" style="font-size: 0.8rem;">Qty:</label>
+                                    <input type="number" id="qty5" name="qty_ouma" min="0" value="0" style="width: 60px; padding: 0.3rem;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Basket Item 6 -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.5rem; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <input type="checkbox" id="item6" name="basket_items[]" value="Stoney Extra Ginger Beer (6x 330ml Cans)">
+                                <label for="item6" style="font-weight: bold;">Stoney Extra Ginger Beer (6 x 330ml Cans)</label>
+                                <div style="font-size: 0.85rem; color: #666;">Real ginger kick carbonated soft drink</div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span style="color: var(--primary); font-weight: bold;">R 75.00</span>
+                                <div>
+                                    <label for="qty6" style="font-size: 0.8rem;">Qty:</label>
+                                    <input type="number" id="qty6" name="qty_stoney" min="0" value="0" style="width: 60px; padding: 0.3rem;">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Section 3: Transaction Action & Notes -->
+                    <fieldset style="border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>3. Transaction Type & Shipping Preference</strong></legend>
                         <br>
 
-                        <div class="form-group" style="margin-bottom: 1rem;">
-                            <label for="category">Enquiry Category:</label>
-                            <select id="category" name="category" required>
-                                <option value="" disabled selected>-- Select an Enquiry Type --</option>
-                                <option value="booking">booking Consultation</option>
-                                <option value="Service Quotation">Services Quotation fee</option>
-                                <option value="general">General Enquiry</option>
+                        <div class="form-group">
+                            <label for="transaction_type">Request Type:</label>
+                            <select id="transaction_type" name="transaction_type" required>
+                                <option value="" disabled selected>-- Select Action --</option>
+                                <option value="checkout_order">Proceed to Checkout & Purchase Order</option>
+                                <option value="quotation_request">Request Bulk Shipping Export Quotation</option>
+                                <option value="general_enquiry">General Product / Stock Enquiry</option>
                             </select>
                         </div>
 
-                        <div style="margin-bottom: 1.5rem;">
-                            <label style="font-weight: bold; font-size: 0.9rem;">Preferred Availability for :</label><br><br>
-                            
-                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
-                                <input type="checkbox" id="avail_saturday" name="availability[]" value="Saturday">
-                                <label for="avail_saturday">Saturday</label>
-                            </div>
-                           
-                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
-                                <input type="checkbox" id="avail_sunday" name="availability[]" value="Sunday">
-                                <label for="avail_sunday">Sunday</label>
-                            </div>
-                           
-                            <div style="display: flex; gap: 0.5rem; align-items: center;">
-                                <input type="checkbox" id="avail_weekdays" name="availability[]" value="Weekdays">
-                                <label for="avail_weekdays">Weekdays</label>
+                        <div class="form-group" style="margin-top: 1rem;">
+                            <label style="font-weight: bold; font-size: 0.9rem;">Shipping Method:</label><br>
+                            <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
+                                <div>
+                                    <input type="radio" id="ship1" name="shipping" value="Standard Air Freight" checked>
+                                    <label for="ship1">Standard Air Freight (7-14 Days)</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="ship2" name="shipping" value="Express Courier">
+                                    <label for="ship2">Express Courier (3-5 Days)</label>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="message">Specific Request:</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Please tell us more about your enquiry or how you'd like to get involved..." required></textarea>
+                        <div class="form-group" style="margin-top: 1rem;">
+                            <label for="message">Additional Instructions / Delivery Notes:</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Mention any specific delivery details, gift wrapping, or questions about your basket..."></textarea>
                         </div>
                     </fieldset>
 
-                    <button type="submit" class="btn-primary" style="align-self: flex-start;">Submit Enquiry</button>
-
-                </form>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            
-            <!-- Column 1: Brand & Logo -->
-            <div class="footer-col brand-col">
-                <div class="footer-brand">
-                    <img src="../images/logo.png" alt="Kasi-Tech Logo" class="footer-logo">
-                    <span class="footer-brand-title">Kasi-Tech Solutions</span>
-                </div>
-                <p class="footer-tagline">In pursuit of digital excellence</p>
-                
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="X (Twitter)">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="YouTube">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://wa.me/27630891350" target="_blank" rel="noopener noreferrer" class="social-icon" title="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Column 2: About Kasi-Tech -->
-            <div class="footer-col">
-                <h4 class="footer-heading">About Kasi-Tech</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">Our History</a></li>
-                    <li><a href="about.html">Mission & Vision</a></li>
-                    <li><a href="services.html">Core Services</a></li>
-                    <li><a href="services.html">Systems Analysis</a></li>
-                    <li><a href="services.html">Database Management</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Helpful Links -->
-            <div class="footer-col">
-                <h4 class="footer-heading">Helpful Links</h4>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="enquiry.html">Request a Quote / Consultation</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Get In Touch -->
-            <div class="footer-col contact-col">
-                <h4 class="footer-heading">Get in touch</h4>
-                <p><strong>Email Address:</strong> KasiTechI@gmail.com</p>
-                <p><strong>WhatsApp:</strong> <a href="https://wa.me/27630891350" target="_blank" style="color: #ffffff; text-decoration: underline;">063 089 1350</a></p>
-                <p><strong>Telephone:</strong> 041 082 1316</p>
-                <div class="location-list">
-                    <p><strong>Location:</strong> Motherwell, Gqeberha</p>
-                    <p><strong>Operating Hours:</strong></p>
-                    <p>Mon-Fri: 08:00–17:00</p>
-                    <p>Weekends: 09:00–14:00</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Kasi-Tech Solutions. All rights reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+                    <button type="submit" class="btn-primary">Submit Order

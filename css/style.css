@@ -1,14 +1,14 @@
 :root {
-    --primary: hsl(226, 71%, 24%); 
-    --primary-dark: #0b2942; 
-    --accent: #f4b41a; 
-    --background: #c5cdd4; 
-    --surface: #ffffff; 
-    --text: #263238; 
-    --border: #d8e2ec; 
+    --primary: #8c6d53;       /* Warm Taupe / Soft Brown */
+    --primary-dark: #594433;  /* Deep Espresso / Dark Taupe */
+    --accent: #d4a373;        /* Warm Nude Sand / Camel */
+    --background: #f7f4ef;    /* Soft Cream / Warm Off-White */
+    --surface: #ffffff;       /* Clean White Card Surface */
+    --text: #4a403a;          /* Muted Dark Brown Text */
+    --border: #e3ded5;        /* Soft Warm Border Tone */
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box; 
 }
 
@@ -105,6 +105,7 @@ a {
     color: var(--accent); 
     font-weight: bold; 
     text-transform: uppercase; 
+    letter-spacing: 1px;
 }
 
 .page-header h1 {
@@ -115,10 +116,11 @@ a {
 .page-introduction {
     max-width: 700px; 
     margin: 0 auto; 
+    color: #f0eae1;
 }
 
 /* ==========================================
-   ABOUT PAGE STYLES
+   ABOUT & GENERAL SECTION STYLES
    ========================================== */
 .about-section {
     padding: 3rem 0;
@@ -127,7 +129,7 @@ a {
 .section-title {
     text-align: center;
     color: var(--primary-dark);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
@@ -143,25 +145,25 @@ a {
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(140, 109, 83, 0.05);
 }
 
 .about-card h3 {
     color: var(--primary-dark);
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .about-card p {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     line-height: 1.5;
-    color: #444444;
+    color: #5c524b;
     margin: 0;
 }
 
 /* ==========================================
-   SERVICES PAGE STYLES
+   SERVICES & TEAM GRID STYLES
    ========================================== */
 .services-section {
     padding: 4rem 0; 
@@ -178,7 +180,7 @@ a {
     background-color: var(--surface); 
     border: 1px solid var(--border); 
     border-radius: 10px; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
     transition: transform 0.25s ease; 
 }
 
@@ -194,7 +196,7 @@ a {
 }
 
 .service-content {
-    padding: 1.25rem; 
+    padding: 1.5rem; 
 }
 
 .service-content h3 {
@@ -204,6 +206,7 @@ a {
 
 .service-content p {
     margin-bottom: 0; 
+    color: #5c524b;
 }
 
 /* ==========================================
@@ -225,7 +228,7 @@ a {
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .form-card h2 {
@@ -256,6 +259,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
@@ -330,7 +334,7 @@ a {
    FOOTER SECTION
    ========================================== */
 .site-footer {
-    background-color: var(--primary); 
+    background-color: var(--primary-dark); 
     color: #ffffff;
     font-family: Arial, sans-serif;
     padding-top: 40px;
@@ -374,7 +378,7 @@ a {
     font-style: italic;
     margin-top: 5px;
     margin-bottom: 20px;
-    color: #ddd;
+    color: #e3ded5;
 }
 
 .social-icons {
@@ -409,6 +413,7 @@ a {
     margin-bottom: 15px;
     position: relative;
     padding-bottom: 5px;
+    color: var(--accent);
 }
 
 .footer-heading::after {
@@ -462,7 +467,7 @@ a {
 .footer-bottom p {
     margin: 0;
     font-size: 12px;
-    color: #ccc;
+    color: #e3ded5;
 }
 
 /* ==========================================
@@ -484,63 +489,4 @@ a {
     }
 
     .services-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .site-nav {
-        width: 100%; 
-        flex-direction: column; 
-    }
-
-    .site-nav a {
-        width: 100%; 
-        text-align: center; 
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr; 
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ==========================================
-   HOME PAGE SPECIFIC STYLES
-   ========================================== */
-.btn-secondary {
-    display: inline-block;
-    background-color: var(--accent);
-    color: var(--primary-dark);
-    padding: 0.85rem 1.5rem;
-    font-size: 0.95rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.25s ease, transform 0.25s ease;
-}
-
-.btn-secondary:hover {
-    background-color: #e0a312;
-    transform: translateY(-2px);
-}
-
-.hero-image-container img {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.showcase-box {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.showcase-box h3 {
-    color: var(--primary-dark);
-    margin-top: 0;
-}
+        grid-template-columns: repeat(2, 1fr);
